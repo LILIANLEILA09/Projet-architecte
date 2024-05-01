@@ -98,7 +98,7 @@
 
     .modaleContainer_validation button, .modaleContainer_validation input {
         margin: 0;
-        width: 100%;
+        width: 80%;
     }
 
     .nonValide input {
