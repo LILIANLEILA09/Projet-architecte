@@ -426,17 +426,16 @@ async function SupprimerProjet(id) {
         method: "DELETE",
         headers: formHeader
     })
+  // Suppression du "projet" dans la const projets
+  let i = 0
+  while (projets[i].id !== id) {
+      i++
+  }
+  projets.splice(i, 1)
 
-    // Suppression du "projet" dans la const projets
-    let i = 0
-    while (projets[i].id !== id) {
-        i++
-    }
-    projets.splice(i, 1)
-
-    // Rechargement des projets
-    photoModale = true
-    sectionGallery.innerHTML = "";
-    modaleImages.innerHTML = "";
-    affichageProjets(projets)
+  // Rechargement des projets
+  photoModale = true
+  sectionGallery.innerHTML = "";
+  modaleImages.innerHTML = "";
+  affichageProjets(projets)
 }
